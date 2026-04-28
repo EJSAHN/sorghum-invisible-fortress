@@ -1,0 +1,61 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter / editor / OS noise
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Analysis outputs and caches
+outputs/*
+!outputs/.gitkeep
+cache/
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Large or local input data
+# Keep raw data outside git unless intentionally publishing a curated small example.
+data/*
+!data/.gitkeep
+!data/README.md
+*.hmp.txt
+*.hmp.txt.gz
+*.gff3
+*.gff3.gz
+*_geno_aligned.hmp.txt
+hyperspec_accession_mean.csv
+*phenotype*.csv
+senegal_master_phenotypes.csv
+Sbicolor_454_v3.1.1.P14.annotation_info.txt
+Sbicolor_454_v3.1.1.P14.annotation_info.txt.gz
+Sbicolor_454_v3.1.1.P14.defline.txt
+Sbicolor_454_v3.1.1.P14.defline.txt.gz
+
+# Generated supplementary workbooks / archives
+Supplementary_Data_S1*.xlsx
+*.zip
