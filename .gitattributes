@@ -1,0 +1,13 @@
+# Normalize text files
+* text=auto
+
+# Keep binary/data-like files binary if intentionally added
+*.xlsx binary
+*.xls binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.zip binary
+*.npy binary
+*.npz binary
