@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sorghum-sdi-analysis"
+version = "0.1.0"
+description = "Analysis scripts for visible/NIR spectral decomposition, SDI calculation, GWAS summaries, and effect-sign enrichment in sorghum seeds."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Ezekiel Ahn" }
+]
+dependencies = [
+  "numpy>=1.23,<3",
+  "pandas>=1.5",
+  "scipy>=1.9",
+  "scikit-learn>=1.1",
+  "matplotlib>=3.6",
+  "openpyxl>=3.1"
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.0",
+  "ruff>=0.8",
+  "pytest>=8.0"
+]
+
+[project.scripts]
+sorghum-sdi-pipeline = "sdi_pipeline:main"
+sorghum-sdi-robustness = "sdi_robustness_checks:main"
+sorghum-sdi-effect-sign = "effect_sign_enrichment:main"
+sorghum-sdi-pc-sensitivity = "gwas_pc_sensitivity:main"
+sorghum-sdi-candidate-enrichment = "candidate_gene_keyword_enrichment:main"
+sorghum-sdi-projection = "genotype_to_spectral_projection:main"
+
+[tool.setuptools]
+py-modules = [
+  "sdi_pipeline",
+  "sdi_robustness_checks",
+  "effect_sign_enrichment",
+  "gwas_pc_sensitivity",
+  "candidate_gene_keyword_enrichment",
+  "genotype_to_spectral_projection"
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

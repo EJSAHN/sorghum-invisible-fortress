@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript or repository."
+title: "Sorghum SDI Analysis Pipeline"
+authors:
+  - family-names: Ahn
+    given-names: Ezekiel
+version: 0.1.0
+license: MIT
